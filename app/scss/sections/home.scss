@@ -1,0 +1,131 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // .home__content
+  &__content {
+  }
+  // .home__subtitle
+  &__subtitle {
+    font-size: 3.2rem;
+    font-weight: 700;
+
+    &:nth-of-type(2) {
+      margin-bottom: 2rem;
+    }
+  }
+  // .home__title
+  &__title {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+
+    & span {
+      color: $main-color;
+    }
+  }
+  // .home__text
+  &__text {
+    max-width: 400px;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  // .home__social-media
+  &__social-media {
+  }
+  // .home__img-box
+  &__img-box {
+  }
+  // .home__img
+  &__img {
+    width: 35vw;
+  }
+  // .home__tech-stack
+  &__tech-stack {
+  }
+  // .home__stacks-text
+  &__stacks-text {
+    width: 100%;
+    margin-bottom: 0.3rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+  // .home__stacks
+  &__stacks {
+    position: relative;
+    padding-top: 0.5rem;
+    max-width: 40rem;
+    width: 100%;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0.15rem;
+      background-color: white;
+      // object-fit: contain;
+    }
+  }
+  // .home__stack
+  &__stack {
+    display: inline-flex;
+    font-size: 3.8rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+.section {
+}
+.subtitle {
+}
+.title {
+}
+.social-media {
+  // .social-media__item
+  &__item {
+    display: inline-flex;
+  }
+  // .social-media__link
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border: 0.2rem solid $main-color;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: $main-color;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: $main-color;
+      color: $second-bg-color;
+      box-shadow: 0 0 1rem $main-color;
+    }
+  }
+}
+.bx {
+}
+.bxl-whatsapp {
+}
+.bxl-telegram {
+}
+.bxl-instagram {
+}
+.bxl-vk {
+}
