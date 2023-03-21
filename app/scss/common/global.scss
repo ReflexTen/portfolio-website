@@ -78,4 +78,40 @@ body {
 }
 
 .title {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  & span {
+    color: $main-color;
+  }
+}
+
+.subtitle {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+  & span {
+    color: $main-color;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: $main-color;
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem $main-color;
+  font-size: 1.6rem;
+  color: $second-bg-color;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+
+  &:hover {
+    box-shadow: none;
+  }
 }
