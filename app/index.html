@@ -27,7 +27,7 @@
   <meta name="theme-color" content="#333333" />
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#ffffff" />
-  <title>Start</title>
+  <title>Bulanov.dev</title>
   <link
     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     rel="stylesheet"
@@ -271,12 +271,61 @@
     </li>
   </ul>
 </section>
+ <section class="contacts section" id="contacts">
+  <h2 class="contacts__heading heading">Contact <span>Me!</span></h2>
+
+  <form class="contacts__form form" action="#">
+    <div class="form__input-box">
+      <input class="form__input" type="text" placeholder="Full Name" required />
+      <input
+        class="form__input"
+        type="email"
+        placeholder="Email Address"
+        required
+      />
+    </div>
+
+    <div class="form__input-box">
+      <input
+        class="form__input"
+        type="number"
+        placeholder="Mobile Number"
+        required
+      />
+      <input
+        class="form__input"
+        type="text"
+        placeholder="Email Subject"
+        required
+      />
+    </div>
+
+    <textarea
+      class="form__textarea"
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      placeholder="Your Message"
+    ></textarea>
+    <button class="form__btn btn" type="submit">Send Message</button>
+  </form>
+</section>
 
     </main>
 
     <footer class="footer">
-  
+  <div class="footer__text-box">
+    <p class="footer__text">
+      Copyright &copy; 2023 by Bulanov.dev | All Rights Reserved.
+    </p>
+  </div>
+
+  <div class="footer__icon-top">
+    <a class="footer__link" href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+  </div>
 </footer>
+
 
     <script src="js/main.min.js"></script>
   </body>

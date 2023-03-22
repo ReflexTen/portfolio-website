@@ -9,6 +9,10 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+
+  &.sticky {
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+  }
 }
 .navbar {
   // .navbar__list
