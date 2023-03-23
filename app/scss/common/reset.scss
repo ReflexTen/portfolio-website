@@ -1,5 +1,12 @@
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  @include media-1 {
+    font-size: 55%;
+  }
 }
 
 html,
