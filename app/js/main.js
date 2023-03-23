@@ -23,4 +23,17 @@ window.onscroll = () => {
   const header = document.querySelector('.header')
 
   header.classList.toggle('sticky', window.scrollY > 100)
+
+  menuIcon.classList.remove('active-menu')
+  navBar.classList.remove('active')
 }
+
+///////////////////////////////////////////////
+
+const menuIcon = document.querySelector('.menu-icon')
+const navBar = document.querySelector('.navbar')
+
+menuIcon.addEventListener('click', () => {
+  menuIcon.classList.toggle('active-menu')
+  navBar.classList.toggle('active')
+})

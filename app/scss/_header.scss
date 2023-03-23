@@ -8,16 +8,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 2;
+
+  @include media-2 {
+    padding: 2rem 3%;
+  }
 
   &.sticky {
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
   }
 }
 .navbar {
+  @include media-3 {
+    position: absolute;
+    transform: translateY(-200%);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background-color: $bg-color;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+
+    &.active {
+      transform: translateY(0);
+    }
+  }
   // .navbar__list
   &__list {
     display: flex;
+
+    @include media-3 {
+      flex-direction: column;
+    }
   }
   // .navbar__item
   &__item {
@@ -32,6 +56,14 @@
     &:hover {
       color: $main-color;
     }
+
+    @include media-3 {
+      display: block;
+      font-size: 2rem;
+      // margin: 3rem 0;
+      margin-left: 0;
+      padding: 3rem 0;
+    }
   }
 }
 
@@ -39,8 +71,60 @@
   color: $main-color;
 }
 
-#menu-icon {
+.menu-icon {
+  position: relative;
   display: none;
-  font-size: 3.6rem;
-  color: $text-color;
+  z-index: 3;
+
+  &__line {
+    display: block;
+    width: 3rem;
+    height: 0.3rem;
+    border-radius: 1.5rem;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+  &.active-menu {
+    .menu-icon {
+      &__line {
+        opacity: 0;
+      }
+    }
+
+    &::before {
+      transform: translateY(0.8rem) rotate(45deg);
+    }
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -0.8rem;
+    left: 0;
+    width: 3rem;
+    height: 0.3rem;
+    border-radius: 1.5rem;
+    background-color: #fff;
+    transition: transform 0.3s;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+    width: 3rem;
+    height: 0.3rem;
+    border-radius: 1.5rem;
+    background-color: #fff;
+    transition: transform 0.3s;
+  }
+
+  @include media-3 {
+    display: block;
+  }
 }
