@@ -38,10 +38,15 @@
   // .home__img
   &__img {
     width: 35vw;
+    animation: floatImages 4s ease-in-out infinite;
 
     @include media-3 {
       width: 70vw;
       margin-top: 4rem;
+    }
+
+    @include media-4 {
+      width: 90vw;
     }
   }
   // .home__tech-stack
@@ -122,13 +127,15 @@
     }
   }
 }
-.bx {
-}
-.bxl-whatsapp {
-}
-.bxl-telegram {
-}
-.bxl-instagram {
-}
-.bxl-vk {
+
+@keyframes floatImages {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
