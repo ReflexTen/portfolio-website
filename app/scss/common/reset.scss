@@ -7,6 +7,9 @@ html {
   @include media-1 {
     font-size: 55%;
   }
+  @include media-4 {
+    font-size: 50%;
+  }
 }
 
 html,
